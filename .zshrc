@@ -1,9 +1,9 @@
 # zsh-completions の設定。コマンド補完機能
 autoload -U compinit && compinit -u
- 
+
 # git のカラー表示
-git config --global color.ui auto 
- 
+git config --global color.ui auto
+
 # vim バインドにする
 bindkey -v
 bindkey -r "^[" vi-cmd-mode
@@ -37,71 +37,71 @@ alias ls='exa'
 alias lsa='exa -abghHliS'
 alias nv='neovide'
 alias nv='neovide'
- 
+
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
- 
+
 # 日本語ファイル名を表示可能にする
 setopt print_eight_bit
- 
+
 # cd なしでもディレクトリ移動
 setopt auto_cd
- 
+
 # ビープ音の停止
 setopt no_beep
- 
+
 # ビープ音の停止(補完時)
 setopt nolistbeep
- 
+
 # cd [TAB] で以前移動したディレクトリを表示
 setopt auto_pushd
- 
+
 # ヒストリ (履歴) を保存、数を増やす
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
- 
+
 # 同時に起動した zsh の間でヒストリを共有する
 setopt share_history
- 
+
 # 直前と同じコマンドの場合はヒストリに追加しない
 setopt hist_ignore_dups
- 
+
 # 同じコマンドをヒストリに残さない
 setopt hist_ignore_all_dups
- 
+
 # スペースから始まるコマンド行はヒストリに残さない
 setopt hist_ignore_space
- 
+
 # ヒストリに保存するときに余分なスペースを削除する
 setopt hist_reduce_blanks
- 
+
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
- 
+
 # [TAB] でパス名の補完候補を表示したあと、
 # 続けて [TAB] を押すと候補からパス名を選択できるようになる
 # 候補を選ぶには [TAB] か Ctrl-N,B,F,P
 zstyle ':completion:*:default' menu select=1
- 
+
 # コマンドのスペルを訂正する
 setopt correct
- 
+
 # cd した先のディレクトリをディレクトリスタックに追加する
 # cd [TAB] でディレクトリのヒストリが表示されるので、選択して移動できる
 # ※ ディレクトリスタック: 今までに行ったディレクトリのヒストリのこと
 setopt auto_pushd
- 
+
 # pushd したとき、ディレクトリがすでにスタックに含まれていればスタックに追加しない
 setopt pushd_ignore_dups
- 
+
 # 拡張 glob を有効にする
 # 拡張 glob を有効にすると # ~ ^ もパターンとして扱われる
 # glob: パス名にマッチするワイルドカードパターンのこと
 # ※ たとえば mv hoge.* ~/dir というコマンドにおける * のこと
 setopt extended_glob
- 
+
 # 単語の一部として扱われる文字のセットを指定する
 # ここではデフォルトのセットから / を抜いたものにしている
 # ※ たとえば Ctrl-W でカーソル前の1単語を削除したとき / までで削除が止まる
@@ -118,14 +118,6 @@ function peco-sshconfig-ssh() {
         ssh -F ~/.ssh/config $host
     fi
 }
-
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/sato-nobuaki/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/sato-nobuaki/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/sato-nobuaki/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/sato-nobuaki/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -163,19 +155,13 @@ export LIBRARY_PATH=/usr/local/lib:$LIBRARY_PATH
 export JAVA_HOME=$HOME/.sdkman/candidates/java/current
 export PATH=$JAVA_HOME/bin:$PATH
 export MYVIMRC=~/.config/nvim/init.vim
-export PATH=/Users/sato-nobuaki/.nimble/bin:$PATH
-export GOPATH=/Users/sato-nobuaki/go
+export PATH=$HOME/.nimble/bin:$PATH
+export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:~/dev/google/flutter/bin
 export PATH=$PATH:~/.local/bin
 
-export BACKLOG_SCALA_PATH="/Users/sato-nobuaki/dev/nulab/backlog-scala"
-export MYSQL_DATA_PATH="/Users/sato-nobuaki/dev/nulab/backlog-scala"
-export BACKLOG_JAVA_PATH="/Users/sato-nobuaki/dev/app"
-export DATABASE_MIGRATION_PATH="/Users/sato-nobuaki/dev/database-migration"
-export THUMBNAIL_SERVICE_PATH="/Users/sato-nobuaki/dev/thumbnail-service"
-export OAUTH_AGENT_PATH="/Users/sato-nobuaki/dev/nulab/oauth-agent"
 export EDITOR='lvim'
 
 # ターミナル起動時にtmuxが起動してない場合は起動する
@@ -194,7 +180,7 @@ export TMP="$TMPDIR"
 alias vdiff='vimdiff'
 
 # starshipの有効化
-eval "$(starship init zsh)" 
+eval "$(starship init zsh)"
 
 ZSH_DIR="${HOME}/.config/zsh/.zsh"
 
@@ -208,3 +194,5 @@ fi
 . /usr/local/etc/profile.d/z.sh
 . /usr/local/opt/asdf/libexec/asdf.sh
 notica() { curl --data "d:$*" "https://notica.us/?IECTRg" ; }
+
+source ~/.zsh/.zshrc.local.zsh

@@ -1,0 +1,16 @@
+### all ignore ###
+/*
+/.**
+
+### not ignore ###
+!/bin/
+!/.zshrc
+!/.zsh**
+!/.tmux.conf
+!/.tmux/
+
+**local**
+!/README.md
+!/LICENSE
+!.gitignore
+!.gitkeep
