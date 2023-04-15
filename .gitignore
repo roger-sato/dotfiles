@@ -1,16 +1,7 @@
-### all ignore ###
-/*
-/.**
-
-### not ignore ###
-!/bin/
-!/.zshrc
-!/.zsh**
-!/.tmux.conf
-!/.tmux/
-
+.gitconfig
+.gitconfigs/
 **local**
-!/README.md
-!/LICENSE
-!.gitignore
-!.gitkeep
+**log**
+.tmux/plugins/
+
+!/.tmux/.tmux.conf.local
