@@ -3,22 +3,22 @@
 set -ue
 
 helpmsg() {
-  command echo "Usage: $0 [--help | -h]" 0>&2
-  command echo ""
+  echo "Usage: $0 [--help | -h]" 0>&2
+  echo ""
 }
 
 link_to_homedir() {
-  command echo "backup old dotfiles..."
-  if [ ! -d "$HOME/.dotbackup" ];then
-    command echo "$HOME/.dotbackup not found. Auto Make it"
-    command mkdir "$HOME/.dotbackup"
+  echo "backup old dotfiles..."
+  if [ ! -d "$HOME/.dotbackup" ]; then
+    echo "$HOME/.dotbackup not found. Auto Make it"
+    mkdir "$HOME/.dotbackup"
   fi
 
   local script_dir
   script_dir=$(dirname "${0}")
 
   local dotdir
-  dotdir=$(dirname ${script_dir})
+  dotdir=$(dirname "${script_dir}")
 
   if [[ "${HOME}" != "${dotdir}" ]]; then
     for file in "${dotdir}"/.??*; do
@@ -29,23 +29,25 @@ link_to_homedir() {
       fi
 
       if [[ -L "${HOME}/${basename}" ]]; then
-        command rm -f "${HOME}/${basename}"
-        command echo "deleted $HOME/${basename}"
+        rm -f "${HOME}/${basename}"
+        echo "deleted $HOME/${basename}"
       fi
-      if [[ -e "$HOME/${basename}" ]];then
-        command mv "$HOME/${basename}" "$HOME/.dotbackup"
-        command echo "move $HOME/${basename} to $HOME/.dotbackup"
+
+      if [[ -e "$HOME/${basename}" ]]; then
+        mv "$HOME/${basename}" "$HOME/.dotbackup"
+        echo "move $HOME/${basename} to $HOME/.dotbackup"
       fi
-      command ln -snf ${file} $HOME
-      command echo "linked $HOME/${basename} to ${file}"
+
+      ln -snf "${file}" "${HOME}"
+      echo "linked $HOME/${basename} to ${file}"
     done
   else
-    command echo "same install src dest"
+    echo "same install src dest"
   fi
 }
 
-while [ $# -gt 0 ];do
-  case ${1} in
+while [ $# -gt 0 ]; do
+  case "${1}" in
     --debug|-d)
       set -uex
       ;;
@@ -60,4 +62,5 @@ while [ $# -gt 0 ];do
 done
 
 link_to_homedir
-command echo -e "\e[1;36m Install completed!!!! \e[m"
+echo -e "\e[1;36m Install completed!!!! \e[m"
+

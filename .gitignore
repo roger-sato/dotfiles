@@ -3,5 +3,6 @@
 **local**
 **log**
 .tmux/plugins/
+.config/Code/**
 
 !/.tmux/.tmux.conf.local
