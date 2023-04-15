@@ -204,3 +204,6 @@ notica() { curl -X POST --data "d:$*" "https://notica.us/?IECTRg" ; }
 if [[ -d ~/.zsh/.zshrc.local.zsh ]]; then
     source ~/.zsh/.zshrc.local.zsh
 fi
+
+export ASDF_DIR="$HOME/.asdf"
+. "$HOME/.asdf/asdf.sh"
