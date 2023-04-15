@@ -191,8 +191,16 @@ if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
 fi
 
 
-. /usr/local/etc/profile.d/z.sh
-. /usr/local/opt/asdf/libexec/asdf.sh
-notica() { curl --data "d:$*" "https://notica.us/?IECTRg" ; }
+if [[ -d /usr/local/etc/profile.d/z.sh ]]; then
+    . /usr/local/etc/profile.d/z.sh
+fi
 
-source ~/.zsh/.zshrc.local.zsh
+if [[ -d /usr/local/opt/asdf/libexec/asdf.sh ]]; then
+    . /usr/local/opt/asdf/libexec/asdf.sh
+fi
+
+notica() { curl -X POST --data "d:$*" "https://notica.us/?IECTRg" ; }
+
+if [[ -d ~/.zsh/.zshrc.local.zsh ]]; then
+    source ~/.zsh/.zshrc.local.zsh
+fi
