@@ -1,0 +1,30 @@
+format = """
+$time\
+$directory\
+$git_branch
+$character """
+
+command_timeout = 1000
+
+[character]
+success_symbol = "[❯](fg:#9DE3E2)"
+error_symbol = "[❯](fg:#E39DDD)"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+style = "fg:#B4B9FA"
+
+[golang]
+format = " [\uE0B6](#40A9E0 bg:none)[ \uE626 $version ]($style)[\uE0B0](#40A9E0 bg:none)"
+style = "bg:#40A9E0 fg:white"
+
+[git_branch]
+format = "[ $symbol$branch]($style)"
+symbol = "\uE725 "
+style = "fg:#FBB1A8"
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+style = "fg:#B5FFBE"

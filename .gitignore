@@ -4,5 +4,6 @@
 **log**
 .tmux/plugins/
 .config/Code/**
+.DS_Store
 
 !/.tmux/.tmux.conf.local

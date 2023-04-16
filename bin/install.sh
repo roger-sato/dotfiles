@@ -15,7 +15,7 @@ link_to_homedir() {
   fi
 
   local script_dir
-  script_dir=$(dirname "${0}")
+  script_dir=$(dirname "$(readlink -f "$0")")
 
   local dotdir
   dotdir=$(dirname "${script_dir}")
