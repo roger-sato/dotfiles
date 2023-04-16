@@ -4,6 +4,7 @@
 **log**
 .tmux/plugins/
 .config/Code/**
+.config/google-chrome/**
 .DS_Store
 
 !/.tmux/.tmux.conf.local
