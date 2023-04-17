@@ -190,26 +190,25 @@ if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
 	done
 fi
 
-
-if [[ -d /usr/local/etc/profile.d/z.sh ]]; then
+if [[ -e /usr/local/etc/profile.d/z.sh ]]; then
     . /usr/local/etc/profile.d/z.sh
 fi
 
-if [[ -d /usr/local/opt/asdf/libexec/asdf.sh ]]; then
+if [[ -e /usr/local/opt/asdf/libexec/asdf.sh ]]; then
+    export ASDF_DIR='/usr/local/opt/asdf/libexec'
     . /usr/local/opt/asdf/libexec/asdf.sh
+fi
+
+if [[ -e $HOME/.asdf/asdf.sh ]]; then
+  . $HOME/.asdf/asdf.sh
 fi
 
 notica() { curl -X POST --data "d:$*" "https://notica.us/?IECTRg" ; }
 
-if [[ -d ~/.zsh/.zshrc.local.zsh ]]; then
+if [[ -e ~/.zsh/.zshrc.local.zsh ]]; then
     source ~/.zsh/.zshrc.local.zsh
 fi
-
-export ASDF_DIR="$HOME/.asdf"
-. "$HOME/.asdf/asdf.sh"
 
 if [[-e ~/.asdf/plugins/java/set-java-home.zsh ]]; then
     . ~/.asdf/plugins/java/set-java-home.zsh
 fi
-
-
