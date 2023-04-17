@@ -182,10 +182,10 @@ alias vdiff='vimdiff'
 # starshipの有効化
 eval "$(starship init zsh)"
 
-ZSH_DIR="${HOME}/.config/zsh/.zsh"
+ZSH_DIR="${HOME}/.zsh"
 
 if [ -d $ZSH_DIR ] && [ -r $ZSH_DIR ] && [ -x $ZSH_DIR ]; then
-	for file in ${ZSH_DIR}/**/*.zsh; do
+	for file in ${ZSH_DIR}/*.zsh; do
 		[ -r $file ] && source $file
 	done
 fi
@@ -209,6 +209,6 @@ if [[ -e ~/.zsh/.zshrc.local.zsh ]]; then
     source ~/.zsh/.zshrc.local.zsh
 fi
 
-if [[-e ~/.asdf/plugins/java/set-java-home.zsh ]]; then
+if [[ -e ~/.asdf/plugins/java/set-java-home.zsh ]]; then
     . ~/.asdf/plugins/java/set-java-home.zsh
 fi
