@@ -6,5 +6,21 @@
 .config/Code/**
 .config/google-chrome/**
 .DS_Store
+.config/autostart
+.config/Android*
+.config/dconf
+.config/evolution
+.config/flutter
+.config/goa-1.0
+.config/Google
+.config/gtk-3.0
+.config/ibus
+.config/pulse
+.config/ulauncher
+.config/.gsd-keyboard*
+.config/gnome*
+.config/mimeapps.list
+.config/monitors*
+.config/user-dirs*
 
 !/.tmux/.tmux.conf.local

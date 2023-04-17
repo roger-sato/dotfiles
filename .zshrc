@@ -207,3 +207,9 @@ fi
 
 export ASDF_DIR="$HOME/.asdf"
 . "$HOME/.asdf/asdf.sh"
+
+if [[-e ~/.asdf/plugins/java/set-java-home.zsh ]]; then
+    . ~/.asdf/plugins/java/set-java-home.zsh
+fi
+
+

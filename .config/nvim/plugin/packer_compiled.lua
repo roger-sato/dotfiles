@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/sato-nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/sato-nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/sato-nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/sato-nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/sato-nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/nobuaki/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,39 +74,44 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["clever-f.vim"] = {
+    loaded = true,
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/clever-f.vim",
+    url = "https://github.com/rhysd/clever-f.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/sato-nobuaki/.local/share/nvim/site/pack/packer/start/packer.nvim",
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
   ["targets.vim"] = {
     loaded = true,
-    path = "/Users/sato-nobuaki/.local/share/nvim/site/pack/packer/start/targets.vim",
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/targets.vim",
     url = "https://github.com/wellle/targets.vim"
   },
   ["vim-commentary"] = {
     loaded = true,
-    path = "/Users/sato-nobuaki/.local/share/nvim/site/pack/packer/start/vim-commentary",
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
   },
   ["vim-easymotion"] = {
     loaded = true,
-    path = "/Users/sato-nobuaki/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/vim-easymotion",
     url = "https://github.com/easymotion/vim-easymotion"
   },
   ["vim-highlightedyank"] = {
     loaded = true,
-    path = "/Users/sato-nobuaki/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/vim-highlightedyank",
     url = "https://github.com/machakann/vim-highlightedyank"
   },
   ["vim-sandwich"] = {
     loaded = true,
-    path = "/Users/sato-nobuaki/.local/share/nvim/site/pack/packer/start/vim-sandwich",
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/vim-sandwich",
     url = "https://github.com/machakann/vim-sandwich"
   },
   ["vim-sneak"] = {
     loaded = true,
-    path = "/Users/sato-nobuaki/.local/share/nvim/site/pack/packer/start/vim-sneak",
+    path = "/home/nobuaki/.local/share/nvim/site/pack/packer/start/vim-sneak",
     url = "https://github.com/justinmk/vim-sneak"
   }
 }
