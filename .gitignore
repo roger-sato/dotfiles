@@ -22,5 +22,6 @@
 .config/mimeapps.list
 .config/monitors*
 .config/user-dirs*
+.config/jgit
 
 !/.tmux/.tmux.conf.local
