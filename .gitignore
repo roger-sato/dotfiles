@@ -14,6 +14,8 @@
 .config/goa-1.0
 .config/Google
 .config/gtk-3.0
+.config/gtk-4.0
+.config/google-chrome
 .config/ibus
 .config/pulse
 .config/ulauncher
@@ -23,5 +25,13 @@
 .config/monitors*
 .config/user-dirs*
 .config/jgit
+.config/mozc
+.config/albert
+.config/nautilus
+.config/Code
+.config/update-notifier
+albert.conf
+ibus-mozc-gnome-initial-setup-done
+
 
 !/.tmux/.tmux.conf.local

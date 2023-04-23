@@ -200,6 +200,7 @@ if [[ -e /usr/local/opt/asdf/libexec/asdf.sh ]]; then
 fi
 
 if [[ -e $HOME/.asdf/asdf.sh ]]; then
+  export ASDF_DIR="$HOME/.asdf"
   . $HOME/.asdf/asdf.sh
 fi
 
