@@ -32,6 +32,8 @@
 .config/update-notifier
 albert.conf
 ibus-mozc-gnome-initial-setup-done
-
+.config/gcloud
+.config/configstore
+.config/iterm2
 
 !/.tmux/.tmux.conf.local
