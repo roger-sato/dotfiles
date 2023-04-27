@@ -213,3 +213,7 @@ fi
 if [[ -e ~/.asdf/plugins/java/set-java-home.zsh ]]; then
     . ~/.asdf/plugins/java/set-java-home.zsh
 fi
+
+if [[ -e /tmp ]]; then
+    export TMP=/tmp
+fi
