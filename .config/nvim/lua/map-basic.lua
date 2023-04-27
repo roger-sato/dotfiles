@@ -20,6 +20,7 @@ map('n', '<leader>j', '<cmd>call VSCodeNotify("workbench.action.focusBelowGroup"
 map('n', '<leader>q', '<cmd>call VSCodeNotify("workbench.action.closeActiveEditor")<cr>', ns)
 map('n', '<leader>w', '<cmd>call VSCodeNotify("workbench.action.files.save")<cr>', ns)
 map('n', '<leader>p', '<cmd>call VSCodeNotify("workbench.action.quickOpen")<cr>', ns)
+map('n', '<leader>t', '<cmd>call VSCodeNotify("workbench.action.terminal.toggleTerminal")<cr>', ns)
 
 map('v', 'j', 'gj', ns)
 map('v', 'k', 'gk', ns)
