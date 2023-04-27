@@ -1,4 +1,6 @@
 vim.cmd('set clipboard+=unnamedplus')
+vim.cmd [[set clipboard=unnamedplus]]
+vim.opt.clipboard:append('unnamedplus')
 vim.wo.number = true
 vim.o.ignorecase = true
 vim.wo.cursorline = true
