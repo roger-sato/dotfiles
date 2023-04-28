@@ -21,6 +21,8 @@ map('n', '<leader>q', '<cmd>call VSCodeNotify("workbench.action.closeActiveEdito
 map('n', '<leader>w', '<cmd>call VSCodeNotify("workbench.action.files.save")<cr>', ns)
 map('n', '<leader>p', '<cmd>call VSCodeNotify("workbench.action.quickOpen")<cr>', ns)
 map('n', '<leader>t', '<cmd>call VSCodeNotify("workbench.action.terminal.toggleTerminal")<cr>', ns)
+map('n', '<leader>z', '<cmd>call VSCodeNotify("workbench.action.toggleZenMode")<cr>', ns)
+map('n', '<leader>r', '<cmd>call VSCodeNotify("workbench.action.reloadWindow")<cr>', ns)
 
 map('v', 'j', 'gj', ns)
 map('v', 'k', 'gk', ns)
