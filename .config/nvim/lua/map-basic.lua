@@ -23,6 +23,7 @@ map('n', '<leader>p', '<cmd>call VSCodeNotify("workbench.action.quickOpen")<cr>'
 map('n', '<leader>t', '<cmd>call VSCodeNotify("workbench.action.terminal.toggleTerminal")<cr>', ns)
 map('n', '<leader>z', '<cmd>call VSCodeNotify("workbench.action.toggleZenMode")<cr>', ns)
 map('n', '<leader>r', '<cmd>call VSCodeNotify("workbench.action.reloadWindow")<cr>', ns)
+map('n', '<leader>f', '<cmd>call VSCodeNotify("actions.find")<cr>', ns)
 
 map('v', 'j', 'gj', ns)
 map('v', 'k', 'gk', ns)
