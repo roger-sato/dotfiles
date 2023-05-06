@@ -24,6 +24,7 @@ map('n', '<leader>t', '<cmd>call VSCodeNotify("workbench.action.terminal.toggleT
 map('n', '<leader>z', '<cmd>call VSCodeNotify("workbench.action.toggleZenMode")<cr>', ns)
 map('n', '<leader>r', '<cmd>call VSCodeNotify("workbench.action.reloadWindow")<cr>', ns)
 map('n', '<leader>f', '<cmd>call VSCodeNotify("actions.find")<cr>', ns)
+map('n', 'gt', '<cmd>call VSCodeNotify("editor.action.showHover")<cr>', ns)
 
 map('v', 'j', 'gj', ns)
 map('v', 'k', 'gk', ns)
